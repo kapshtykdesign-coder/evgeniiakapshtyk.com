@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evgeniia Kapshtyk · Digital Marketing Specialist</title>
+  <meta name="description" content="Evgeniia Kapshtyk — digital marketer with 6 years in B2B SaaS and e-commerce. Helsinki-based, open to hybrid Finland and remote EMEA roles." />
+  <meta property="og:title" content="Evgeniia Kapshtyk · Digital Marketing Specialist" />
+  <meta property="og:description" content="Helsinki-based digital marketer with 6 years of experience in B2B SaaS and e-commerce. Open to hybrid Finland and remote EMEA roles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://evgeniiakapshtyk.com/" />
+  <link rel="canonical" href="https://evgeniiakapshtyk.com/" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "url": "https://evgeniiakapshtyk.com/",
+    "name": "Evgeniia Kapshtyk",
+    "jobTitle": "Digital Marketing Specialist",
+    "description": "Helsinki-based digital marketer with 6 years of experience in B2B SaaS and e-commerce. Specialising in SEO, GEO, content strategy, ABM, outbound, demand generation and CRO.",
+    "email": "kapshtyk.design@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Helsinki",
+      "addressCountry": "FI"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/evgeniia-kapshtyk/",
+      "https://www.instagram.com/scandy_shop/"
+    ],
+    "knowsAbout": [
+      "SEO", "GEO", "AEO", "Content Strategy", "Demand Generation",
+      "CRO", "GTM Strategy", "Product Marketing", "E-commerce",
+      "ABM", "Email Marketing", "Outbound Marketing", "Paid Social",
+      "B2B SaaS Marketing", "Website Management"
+    ],
+    "knowsLanguage": ["English", "Russian", "Finnish"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #ECEDF8;
+      --bg-alt:      #E4E5F4;
+      --bg-dark:     #191828;
+      --white:       #FFFFFF;
+      --text:        #191828;
+      --text-muted:  #6A6A8E;
+      --text-ghost:  #B4B4CC;
+      --purple:      #7C3AED;
+      --purple-soft: #EDE9FE;
+      --orange:      #D97706;
+      --green:       #16A34A;
+      --green-light: #DCFCE7;
+      --border:      #D8D8EE;
+      --radius:      18px;
+      --max:         840px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.90);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .nav-inner {
+      max-width: calc(var(--max) + 80px); margin: 0 auto; padding: 0 40px;
+      display: flex; justify-content: space-between; align-items: center;
+      height: 68px;
+    }
+    .nav-identity {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+    }
+    .nav-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      border: 2px solid var(--border);
+    }
+    .nav-avatar-fb {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--purple-soft); border: 2px solid var(--border);
+      display: none; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: var(--purple);
+    }
+    .nav-name { font-weight: 700; font-size: 16px; letter-spacing: -0.3px; color: var(--text); }
+    nav ul { list-style: none; display: flex; gap: 4px; }
+    nav a.nl {
+      color: var(--text); text-decoration: none;
+      font-size: 14px; font-weight: 500;
+      padding: 7px 15px; border-radius: 100px;
+      transition: all 0.18s;
+    }
+    nav a.nl:hover { color: var(--text); background: var(--bg); }
+
+    /* ── SCROLL REVEAL ───────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
+                  transform 0.65s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── HERO ─────────────────────────────── */
+    #hero {
+      background: var(--white);
+      padding: 0 40px;
+      min-height: calc(100vh - 68px);
+      margin-top: 68px;
+      display: flex; align-items: center;
+    }
+    .hero-inner {
+      max-width: var(--max); margin: 0 auto; width: 100%;
+      padding: 96px 0 88px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-light); color: var(--green);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 16px; border-radius: 100px; margin-bottom: 28px;
+    }
+    .hero-badge::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--green); border-radius: 50%;
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity:1; } 50% { opacity:0.3; }
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 78px);
+      font-weight: 900; line-height: 1.02; letter-spacing: -3px;
+      margin-bottom: 52px;
+      animation: heroIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.1s both;
+    }
+    h1 .hl { color: var(--orange); }
+
+    @keyframes heroIn {
+      from { opacity:0; transform: translateY(32px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+
+    .hero-foot {
+      display: flex; align-items: flex-start;
+      padding-top: 36px;
+      animation: heroIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.25s both;
+    }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; padding-top: 2px; }
+
+    /* ── BUTTONS ──────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 12px 24px; border-radius: 100px;
+      font-size: 14px; font-weight: 600;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: all 0.18s; white-space: nowrap; letter-spacing: -0.1px;
+    }
+    .btn-dark { background: var(--text); color: var(--white); }
+    .btn-dark:hover { background: #2e2d42; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(25,24,40,0.25); }
+    .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+    .btn-outline:hover { border-color: var(--text-ghost); background: var(--bg); }
+
+    /* ── PROMPT SECTION ──────────────────── */
+    #prompt-section {
+      padding: 100px 40px;
+      background: var(--bg-dark);
+    }
+    .prompt-inner { max-width: var(--max); margin: 0 auto; }
+    .prompt-wrap { display: inline-flex; flex-direction: column; width: fit-content; max-width: 100%; }
+    .prompt-heading {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 800;
+      letter-spacing: -1.5px; line-height: 1.1; color: var(--white);
+      margin-bottom: 40px;
+    }
+    @keyframes rainbowShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .rainbow-text {
+      background: linear-gradient(90deg, #ff6b6b, #ffa94d, #ffd43b, #69db7c, #4dabf7, #748ffc, #da77f2, #ff6b6b);
+      background-size: 400% 400%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbowShift 5s ease infinite;
+    }
+    .prompt-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 22px 28px 18px;
+      box-shadow: 0 8px 40px rgba(124,58,237,0.08), 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .prompt-line {
+      display: flex; align-items: baseline; gap: 0;
+      margin-bottom: 16px;
+    }
+    .prompt-static {
+      font-size: 17px; font-weight: 600; color: var(--text);
+      letter-spacing: -0.3px; white-space: nowrap;
+    }
+    .prompt-text {
+      font-size: 17px; font-weight: 500; color: var(--purple);
+      letter-spacing: -0.3px;
+    }
+    .prompt-cursor {
+      display: inline-block; width: 2px; height: 1em;
+      background: var(--purple); margin-left: 2px; vertical-align: text-bottom;
+      animation: cursorBlink 1s step-end infinite;
+    }
+    @keyframes cursorBlink {
+      0%,100% { opacity:1; } 50% { opacity:0; }
+    }
+    .prompt-footer {
+      display: flex; justify-content: flex-end;
+    }
+    .prompt-send {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--text); color: var(--white);
+      text-decoration: none; flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .prompt-send:hover { background: #2e2d42; transform: scale(1.08); }
+
+    /* ── STATS ────────────────────────────── */
+    #stats { background: var(--bg-dark); padding: 80px 40px; }
+    .stats-top { max-width: var(--max); margin: 0 auto 48px; }
+    .stats-eyebrow {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.14em; color: rgba(255,255,255,0.3); margin-bottom: 12px;
+    }
+    .stats-headline {
+      font-size: clamp(34px, 5vw, 52px); font-weight: 800;
+      color: var(--white); letter-spacing: -2px; line-height: 1.1;
+    }
+    .stats-headline .grad {
+      background: linear-gradient(90deg, #A78BFA, #F472B6);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stats-scroll-outer {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 100px, black calc(100% - 100px), transparent);
+      mask-image: linear-gradient(to right, transparent, black 100px, black calc(100% - 100px), transparent);
+    }
+    .stats-track {
+      display: flex; gap: 16px;
+      width: max-content;
+      animation: statsScroll 30s linear infinite;
+      padding: 4px 0 8px;
+    }
+    .stats-track:hover { animation-play-state: paused; }
+    @keyframes statsScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .stat-card {
+      width: 256px; flex-shrink: 0;
+      border-radius: var(--radius); padding: 36px 24px;
+      overflow: hidden; position: relative;
+      min-height: 196px; display: flex; flex-direction: column;
+      justify-content: flex-end; text-align: center;
+    }
+    .stat-card-1 { background: radial-gradient(circle at 60% 0%, #A78BFA 0%, #7C3AED 40%, #191828 100%); }
+    .stat-card-2 { background: radial-gradient(circle at 50% 0%, #F9A8D4 0%, #EC4899 40%, #191828 100%); }
+    .stat-card-3 { background: radial-gradient(circle at 40% 0%, #93C5FD 0%, #3B82F6 40%, #191828 100%); }
+    .stat-card-4 { background: radial-gradient(circle at 50% 0%, #6EE7B7 0%, #10B981 40%, #191828 100%); }
+    .stat-card-5 { background: radial-gradient(circle at 50% 0%, #FCD34D 0%, #F59E0B 40%, #191828 100%); }
+    .stat-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 60% 20%, rgba(255,255,255,0.12) 0%, transparent 60%);
+    }
+    .stat-num {
+      font-size: 48px; font-weight: 800; color: var(--white);
+      letter-spacing: -2px; line-height: 1; margin-bottom: 8px; position: relative;
+    }
+    .stat-label { font-size: 14px; color: rgba(255,255,255,0.65); position: relative; }
+    .stat-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 4px; position: relative; }
+
+    /* ── ABOUT ────────────────────────────── */
+    #about { background: var(--bg); padding: 100px 40px; }
+    .about-inner { max-width: var(--max); margin: 0 auto; }
+    .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .eyebrow {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--text-muted); margin-bottom: 14px;
+    }
+    h2 {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 800;
+      letter-spacing: -1.5px; line-height: 1.1; color: var(--text);
+      margin-bottom: 32px;
+    }
+    .about-text p {
+      font-size: 17px; line-height: 1.8; color: var(--text-muted); margin-bottom: 18px;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text strong { color: var(--text); font-weight: 600; }
+    .about-photo {
+      display: flex; align-items: center; justify-content: center;
+    }
+    .about-photo img {
+      width: 260px; height: 260px;
+      object-fit: cover; object-position: top center;
+      border-radius: 50%;
+      box-shadow: 0 24px 48px rgba(124,58,237,0.15);
+    }
+
+    /* ── EXPERIENCE ───────────────────────── */
+    #experience { background: var(--bg); padding: 100px 40px; }
+    .exp-inner { max-width: var(--max); margin: 0 auto; }
+    .exp-list { display: flex; flex-direction: column; }
+    .exp-item {
+      display: grid; grid-template-columns: 150px 1fr; gap: 40px;
+      padding: 44px 0; border-bottom: 1px solid var(--border);
+    }
+    .exp-item:first-child { border-top: none; }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-co {
+      font-size: 14px; font-weight: 700; color: var(--text);
+      letter-spacing: -0.2px; margin-bottom: 6px;
+    }
+    .exp-co a { color: inherit; text-decoration: none; }
+    .exp-co a:hover { color: var(--purple); }
+    .exp-period { font-size: 12px; color: var(--text-muted); }
+    .exp-desc { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-weight: 500; letter-spacing: 0.02em; }
+    .exp-role { font-size: 18px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 18px; line-height: 1.3; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+    .exp-bullets li {
+      font-size: 14px; color: var(--text-muted); line-height: 1.65;
+      padding-left: 20px; position: relative;
+    }
+    .exp-bullets li::before {
+      content: '–'; position: absolute; left: 0; color: var(--text-muted); font-size: 14px; top: 0;
+    }
+    .chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+    .chips-row:last-child { margin-bottom: 0; }
+    .chip-m {
+      background: #EDE9FE; color: #6D28D9;
+      font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 100px;
+      border: 1.5px solid #DDD6FE;
+      letter-spacing: 0.01em;
+    }
+    .chip-t {
+      background: var(--bg); color: var(--text-muted);
+      font-size: 12px; padding: 4px 12px; border-radius: 100px; border: 1px solid var(--border);
+    }
+    a.chip-t {
+      text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    a.chip-t:hover { border-color: var(--text-ghost); color: var(--text); }
+
+    /* ── SKILLS ───────────────────────────── */
+    .skills-inner { max-width: var(--max); margin: 0 auto; }
+    .skills-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .skill-col-title {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 14px;
+    }
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .tag-cloud:last-child { margin-bottom: 0; }
+    /* ── SKILLS ───────────────────────────── */
+    #skills { background: var(--white); padding: 100px 40px; }
+    .skill-tag {
+      display: inline-block;
+      font-size: 13px; padding: 6px 14px; border-radius: 100px;
+      border: 1.5px solid; font-weight: 500;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .skill-tag:hover { opacity: 0.8; transform: translateY(-1px); }
+
+    .tag-green  { background: #DCFCE7; color: #166534; border-color: #BBF7D0; }
+    .tag-orange { background: #FEF3C7; color: #92400E; border-color: #FDE68A; }
+    .tag-purple { background: #EDE9FE; color: #6D28D9; border-color: #DDD6FE; }
+    .tag-blue   { background: #DBEAFE; color: #1E40AF; border-color: #BFDBFE; }
+    .tag-teal   { background: #CCFBF1; color: #0F766E; border-color: #99F6E4; }
+    .tag-pink   { background: #FCE7F3; color: #9D174D; border-color: #FBCFE8; }
+    .tag-gray   { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+
+    .tag-group-label {
+      width: 100%; flex-basis: 100%;
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--text-ghost);
+      margin-bottom: 8px; margin-top: 20px;
+    }
+    .tag-group-label:first-child { margin-top: 0; }
+
+    /* ── TESTIMONIALS ─────────────────────── */
+    #testimonials { background: var(--white); padding: 100px 40px; }
+    .testimonials-inner { max-width: var(--max); margin: 0 auto; }
+    .t-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .tcard {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 20px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .tcard:hover { background: var(--bg-alt); transform: translateY(-3px); }
+    .tquote { font-size: 14px; line-height: 1.75; color: var(--text-muted); flex: 1; }
+    .tquote::before {
+      content: '\201C'; font-size: 36px; color: var(--purple);
+      opacity: 0.8; line-height: 0; vertical-align: -12px; margin-right: 3px;
+    }
+    .tauthor { border-top: 1px solid var(--border); padding-top: 16px; }
+    .tauthor-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .tauthor-title { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+    /* ── MARQUEE QUOTE ────────────────────── */
+    #marquee { background: var(--bg-dark); padding: 80px 0; overflow: hidden; }
+    .marquee-track {
+      display: flex; gap: 0;
+      animation: marqueeScroll 60s linear infinite;
+      width: max-content;
+    }
+    .marquee-text {
+      font-size: clamp(36px, 6vw, 64px); font-weight: 900;
+      letter-spacing: -2px; white-space: nowrap; padding-right: 80px;
+      color: var(--white);
+    }
+    .marquee-text .mo { color: #FCD34D; }
+    .marquee-text .mp { color: #C4B5FD; }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── CONTACT ──────────────────────────── */
+    #contact { background: var(--bg); padding: 100px 40px; }
+    .contact-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    #contact .eyebrow { color: var(--text-muted); }
+    #contact h2 { color: var(--text); }
+    .contact-left p { font-size: 17px; color: var(--text-muted); line-height: 1.75; margin-bottom: 32px; }
+    .contact-btns { display: flex; gap: 12px; align-items: center; }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .contact-status {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .status-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #4ADE80; flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(74,222,128,0.25);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.25); }
+      50%       { box-shadow: 0 0 0 6px rgba(74,222,128,0.10); }
+    }
+    .status-text { font-size: 15px; font-weight: 600; color: #4ADE80; }
+    .contact-divider { height: 1px; background: var(--border); }
+    .contact-detail {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 12px;
+    }
+    .contact-detail-label {
+      font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-muted); white-space: nowrap;
+    }
+    .contact-detail-value {
+      font-size: 14px; color: var(--text); text-align: right;
+    }
+    .contact-icon-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      text-decoration: none; border-radius: 12px;
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .contact-icon-link:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.18); }
+
+    /* ── FOOTER ───────────────────────────── */
+    footer {
+      background: var(--bg); padding: 48px 40px 32px;
+    }
+    .footer-inner { max-width: var(--max); margin: 0 auto; }
+    .footer-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 32px; flex-wrap: wrap; gap: 24px;
+    }
+    .footer-identity { display: flex; align-items: center; gap: 12px; }
+    .footer-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      border: 2px solid var(--border);
+    }
+    .footer-avatar-fb {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--purple-soft); border: 2px solid var(--border);
+      display: none; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: var(--purple);
+    }
+    .footer-name { font-size: 15px; font-weight: 700; color: var(--text); letter-spacing: -0.2px; }
+    .footer-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+    .footer-nav a {
+      color: var(--text-muted); text-decoration: none;
+      font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 100px;
+      transition: all 0.18s;
+    }
+    .footer-nav a:hover { color: var(--text); background: var(--bg-alt); }
+    .footer-divider { display: none; }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 8px;
+    }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+    .footer-vibe { font-size: 13px; color: var(--text-muted); }
+
+    /* ── RESPONSIVE ───────────────────────── */
+    /* ── HAMBURGER ───────────────────────── */
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center; gap: 5px;
+      width: 36px; height: 36px; background: none; border: none; cursor: pointer;
+      padding: 4px; border-radius: 8px;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--text); border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-mobile-menu {
+      display: none; position: fixed; top: 68px; left: 0; right: 0;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      flex-direction: column; padding: 12px 20px 20px; gap: 4px;
+      z-index: 99;
+    }
+    .nav-mobile-menu.open { display: flex; }
+    .nav-mobile-menu a {
+      color: var(--text); text-decoration: none; font-size: 16px; font-weight: 500;
+      padding: 12px 16px; border-radius: 12px;
+      transition: background 0.15s;
+    }
+    .nav-mobile-menu a:hover { background: var(--bg); }
+
+    /* ── TABLET (≤900px) ──────────────────── */
+    @media (max-width: 900px) {
+      .t-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── MOBILE (≤680px) ──────────────────── */
+    @media (max-width: 680px) {
+      /* Nav */
+      nav ul { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-inner { padding: 0 20px; }
+
+      /* Global padding */
+      #hero, #about, #experience, #skills, #testimonials, #contact,
+      #prompt-section, .stats-top { padding-left: 20px; padding-right: 20px; }
+      footer { padding-left: 20px; padding-right: 20px; }
+
+      /* Hero */
+      #hero { min-height: calc(100svh - 68px); padding: 0 20px; }
+      h1 { font-size: clamp(36px, 10vw, 56px); letter-spacing: -2px; margin-bottom: 36px; }
+      .hero-foot { padding-top: 20px; }
+      .hero-actions { flex-wrap: wrap; }
+
+      /* About */
+      .about-layout { grid-template-columns: 1fr; }
+      .about-photo {
+        display: flex; justify-content: center; order: -1; margin-bottom: 8px;
+      }
+      .about-photo img { width: 180px; height: 180px; }
+
+      /* Stats */
+      .stats-top { padding: 48px 20px 24px; }
+      .stats-headline { font-size: clamp(24px, 6vw, 36px); }
+      .stat-card { width: 200px; min-height: 160px; padding: 24px 16px; }
+      .stat-num { font-size: clamp(28px, 7vw, 40px); }
+
+      /* Testimonials */
+      .t-grid { grid-template-columns: 1fr; }
+
+      /* Experience */
+      .exp-item { grid-template-columns: 1fr; gap: 6px; }
+      .exp-period { margin-bottom: 12px; }
+
+      /* Skills */
+      .skills-cols { grid-template-columns: 1fr; gap: 36px; }
+
+      /* Prompt */
+      .prompt-card { padding: 18px 20px 14px; }
+      .prompt-line { flex-wrap: wrap; }
+
+      /* Contact */
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      /* Footer */
+      .footer-top { flex-direction: column; gap: 16px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-identity">
+      <img src="profile.png" alt="Evgeniia" class="nav-avatar"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="nav-avatar-fb">EK</div>
+      <span class="nav-name">Evgeniia Kapshtyk</span>
+    </a>
+    <ul>
+      <li><a href="#about" class="nl">About</a></li>
+      <li><a href="#experience" class="nl">Experience</a></li>
+      <li><a href="#testimonials" class="nl">Recommendations</a></li>
+      <li><a href="#contact" class="nl">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#testimonials" class="mobile-link">Recommendations</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Open to new roles</div>
+    <h1>
+      Hello, I'm Evgeniia.<br/>
+      I help B2B startups and<br/>
+      small companies <span class="hl">grow<br/>through marketing</span>
+    </h1>
+    <div class="hero-foot">
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-dark">Let's talk</a>
+        <a href="#experience" class="btn btn-outline">See my work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="eyebrow reveal">About me</div>
+    <h2 class="reveal">Who I am</h2>
+    <div class="about-layout">
+      <div class="about-text reveal">
+        <p>Helsinki-based digital marketer with 6 years of experience across B2B SaaS, B2C and D2C e-commerce. I've run SEO, GEO, AEO, content, ABM, outbound, email, websites, stores and paid social – often all at once.</p>
+        <p>I work solo or embedded in a team, giving growing companies a full marketing function without the overhead of hiring one. AI is part of my daily workflow.</p>
+        <p>Outside work: forests, the seaside, design and architecture, travel and World of Warcraft.</p>
+      </div>
+      <div class="about-photo reveal reveal-delay-2">
+        <img src="profile.png" alt="Evgeniia Kapshtyk" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-top reveal">
+    <div class="stats-eyebrow">Results I've delivered</div>
+    <div class="stats-headline">Numbers that <span class="grad">actually matter</span></div>
+  </div>
+  <div class="stats-scroll-outer">
+    <div class="stats-track">
+      <div class="stat-card stat-card-1">
+        <div class="stat-num">+1750%</div>
+        <div class="stat-label">demo requests</div>
+        <div class="stat-note">at Exquance Software</div>
+      </div>
+      <div class="stat-card stat-card-2">
+        <div class="stat-num">+120%</div>
+        <div class="stat-label">organic traffic</div>
+        <div class="stat-note">at Exquance Software</div>
+      </div>
+      <div class="stat-card stat-card-4">
+        <div class="stat-num">+230%</div>
+        <div class="stat-label">new website users</div>
+        <div class="stat-note">at Exquance Software</div>
+      </div>
+      <div class="stat-card stat-card-3">
+        <div class="stat-num">15.5K</div>
+        <div class="stat-label">Instagram followers</div>
+        <div class="stat-note">built from zero at Scandy Shop</div>
+      </div>
+      <div class="stat-card stat-card-5">
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">happy customers</div>
+        <div class="stat-note">at Scandy Shop</div>
+      </div>
+      <!-- duplicate for seamless loop -->
+      <div class="stat-card stat-card-1" aria-hidden="true">
+        <div class="stat-num">+1750%</div>
+        <div class="stat-label">demo requests</div>
+        <div class="stat-note">at Exquance Software</div>
+      </div>
+      <div class="stat-card stat-card-2" aria-hidden="true">
+        <div class="stat-num">+120%</div>
+        <div class="stat-label">organic traffic</div>
+        <div class="stat-note">at Exquance Software</div>
+      </div>
+      <div class="stat-card stat-card-4" aria-hidden="true">
+        <div class="stat-num">+230%</div>
+        <div class="stat-label">new website users</div>
+        <div class="stat-note">at Exquance Software</div>
+      </div>
+      <div class="stat-card stat-card-3" aria-hidden="true">
+        <div class="stat-num">15.5K</div>
+        <div class="stat-label">Instagram followers</div>
+        <div class="stat-note">built from zero at Scandy Shop</div>
+      </div>
+      <div class="stat-card stat-card-5" aria-hidden="true">
+        <div class="stat-num">1000+</div>
+        <div class="stat-label">happy customers</div>
+        <div class="stat-note">at Scandy Shop</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-inner">
+    <div class="eyebrow reveal">What people say</div>
+    <h2 class="reveal">Recommendations</h2>
+    <div class="t-grid">
+      <div class="tcard reveal reveal-delay-1">
+        <p class="tquote">Evgeniia's drive and passion for ecommerce and marketing shone through in her work. Evgeniia consistently demonstrated great value as a team player, always willing to lend a hand and contribute meaningfully to our projects.</p>
+        <div class="tauthor">
+          <div class="tauthor-name">Sebastian Schauman</div>
+          <div class="tauthor-title">CEO & Founder, A.S.Helsingö</div>
+        </div>
+      </div>
+      <div class="tcard reveal reveal-delay-2">
+        <p class="tquote">Evgeniia is proactive and has good technical expertise within the marketing field. Would highly recommend her for roles focused on pipeline impact. We collaborated closely on ABM programs and outbound for our regional sales team.</p>
+        <div class="tauthor">
+          <div class="tauthor-name">Kim Koivula</div>
+          <div class="tauthor-title">Regional Marketing Team Lead, One Click LCA</div>
+        </div>
+      </div>
+      <div class="tcard reveal reveal-delay-3">
+        <p class="tquote">Evgeniia had a vision and was capable of running things independently, which was exactly what we were looking for. A true pleasure to work with in the digital marketing space.</p>
+        <div class="tauthor">
+          <div class="tauthor-name">Markus Asikainen</div>
+          <div class="tauthor-title">Founder, M2 Financial Modeling Group</div>
+        </div>
+      </div>
+      <div class="tcard reveal reveal-delay-1">
+        <p class="tquote">Evgeniia was very communicative, worked at a fast pace, was thorough, and always a kind and gentle colleague who shared knowledge and tips on how to optimise every project. A great help for our ABM campaign launch.</p>
+        <div class="tauthor">
+          <div class="tauthor-name">Ulrika Olin Rudqvist</div>
+          <div class="tauthor-title">Regional Marketing Specialist Nordics, One Click LCA</div>
+        </div>
+      </div>
+      <div class="tcard reveal reveal-delay-2">
+        <p class="tquote">I've grown to truly admire Evgeniia's drive and dedication to acquiring new skills and reaching her goals. Evgeniia has a remarkable positive attitude and will always find a way to iterate and grow even when the chances are seemingly against her.</p>
+        <div class="tauthor">
+          <div class="tauthor-name">Viivi Marttinen</div>
+          <div class="tauthor-title">Head of Community and Talent, Herizon</div>
+        </div>
+      </div>
+      <div class="tcard reveal reveal-delay-3">
+        <p class="tquote">I recommend Evgeniia very highly as a responsible partner. I consider Evgeniia a person with a really high potential and motivation to perform excellent in any area related with marketing, management and design.</p>
+        <div class="tauthor">
+          <div class="tauthor-name">Anna Dobrovolskaya</div>
+          <div class="tauthor-title">CEO, Suncare.cy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="exp-inner">
+    <div class="eyebrow reveal">Experience</div>
+    <h2 class="reveal">Where I've built things</h2>
+    <div class="exp-list">
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-co">One Click LCA</div>
+          <div class="exp-desc">B2B SaaS · Sustainability</div>
+          <div class="exp-period">Mar – Jun 2026</div>
+        </div>
+        <div>
+          <div class="exp-role">Senior Marketing Specialist (Outbound & ABM)</div>
+          <ul class="exp-bullets">
+            <li>Built ICP-aligned contact and account lists for BDR, SDR, and AM teams using Cognism and Apollo.</li>
+            <li>Planned and launched outbound and event-based email sequences in Salesforce: templates, cadences, full execution.</li>
+            <li>Wrote the company's first ABM operating framework: account tiering, intent signals, engagement stages, tool stack.</li>
+            <li>Used HubSpot Buyer Intent to identify and prioritise high-intent ICP accounts for outbound targeting.</li>
+          </ul>
+          <div class="chips-row">
+            <span class="chip-t">Salesforce</span><span class="chip-t">HubSpot</span>
+            <span class="chip-t">Cognism</span><span class="chip-t">Apollo</span>
+            <span class="chip-t">ChatGPT</span><span class="chip-t">Claude</span>
+            <span class="chip-t">Confluence</span><span class="chip-t">Jira</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-co"><a href="https://www.exquance.com/" target="_blank" rel="noopener noreferrer">Exquance Software</a></div>
+          <div class="exp-desc">B2B SaaS · PropTech</div>
+          <div class="exp-period">Oct 2024 – Jan 2026</div>
+        </div>
+        <div>
+          <div class="exp-role">Digital Marketing Specialist</div>
+          <ul class="exp-bullets">
+            <li>Owned website strategy, UX, content, and CRO across the full funnel: blogs, product pages, customer stories, FAQs.</li>
+            <li>Drove organic growth via SEO, GEO, AEO, content, and UX optimisation (+237% new users, +120% organic traffic in 10 months).</li>
+            <li>Ran CRO experiments using Hotjar, Microsoft Clarity, and behavioral analytics, delivering +1750% YoY increase in demo request conversions (from 2 to 37).</li>
+            <li>Planned, created, distributed and repurposed social media content to support brand awareness and demand generation across LinkedIn, X, Facebook, YouTube, and Reddit.</li>
+            <li>Implemented and owned analytics infrastructure: GA4, GTM, and Google Search Console.</li>
+            <li>Implemented HubSpot from scratch: CRM, marketing automation, forms, and lead management.</li>
+          </ul>
+          <div class="chips-row">
+            <span class="chip-m">+1750% demo requests</span>
+            <span class="chip-m">+120% organic traffic</span>
+            <span class="chip-m">+237% new users</span>
+          </div>
+          <div class="chips-row">
+            <span class="chip-t">Webflow</span><span class="chip-t">HubSpot</span>
+            <span class="chip-t">GA4</span><span class="chip-t">Google Search Console</span>
+            <span class="chip-t">Microsoft Clarity</span><span class="chip-t">LinkedIn Ads</span>
+            <span class="chip-t">Hotjar</span><span class="chip-t">G2</span>
+            <span class="chip-t">Canva</span><span class="chip-t">Claude</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-co"><a href="https://helsingo.com/" target="_blank" rel="noopener noreferrer">A.S.Helsingö</a></div>
+          <div class="exp-desc">D2C · Furniture & Design</div>
+          <div class="exp-period">Aug 2023 – Feb 2024</div>
+        </div>
+        <div>
+          <div class="exp-role">E-commerce Specialist</div>
+          <ul class="exp-bullets">
+            <li>Developed the online store with a focus on layout, navigation, landing pages, and customer journey.</li>
+            <li>Created customer-centric content for the store and blog to enhance brand awareness, build trust, and drive growth.</li>
+            <li>Enhanced organic SEO with keyword-rich content and resolved product indexing issues in Google Search Console.</li>
+          </ul>
+          <div class="chips-row">
+            <span class="chip-m">+22% new users</span>
+            <span class="chip-m">Top 7 Google search rankings</span>
+          </div>
+          <div class="chips-row">
+            <span class="chip-t">Shopify</span><span class="chip-t">GA4</span>
+            <span class="chip-t">Google Search Console</span><span class="chip-t">Supermetrics</span>
+            <span class="chip-t">Looker Studio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-co"><a href="https://www.instagram.com/scandy_shop/" target="_blank" rel="noopener noreferrer">Scandy Shop</a></div>
+          <div class="exp-desc">B2C · E-commerce</div>
+          <div class="exp-period">2019 – 2023</div>
+        </div>
+        <div>
+          <div class="exp-role">Founder & Marketing Manager</div>
+          <ul class="exp-bullets">
+            <li>Built and ran a CMS-based e-commerce store solo from scratch: architecture, UX, content, tech stack, and daily ops for 1,000+ customers across 4 years.</li>
+            <li>Ran multi-channel campaigns (SEO, paid social, email, influencers) driving +37% traffic and +15% new customer acquisition within 6 months.</li>
+            <li>Led CRO and lifecycle optimisation: +12% conversion rate in 6 months, +10% AOV within a year via email, content, and UX improvements.</li>
+            <li>Built email automation workflows, cutting manual communication tasks by 40% while improving customer engagement.</li>
+            <li>Coordinated 8 influencer partnerships and grew a 15.5K Instagram community (@scandy_shop) from zero.</li>
+          </ul>
+          <div class="chips-row">
+            <span class="chip-m">1,000+ customers</span>
+            <span class="chip-m">15.5K Instagram</span>
+            <span class="chip-m">+37% traffic</span>
+            <span class="chip-m">+12% conversion</span>
+            <span class="chip-m">+10% AOV</span>
+          </div>
+          <div class="chips-row">
+            <span class="chip-t">InSales</span><span class="chip-t">Meta Ads</span>
+            <span class="chip-t">Mailchimp</span><span class="chip-t">Instagram</span>
+            <span class="chip-t">Canva</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="skills-inner">
+    <div class="eyebrow reveal">Skills & Tools</div>
+    <h2 class="reveal">What I bring and use</h2>
+    <div class="skills-cols">
+
+      <!-- LEFT: Skills -->
+      <div class="reveal">
+        <div class="skill-col-title">Skills</div>
+        <div class="tag-cloud">
+          <span class="skill-tag tag-green">SEO</span>
+          <span class="skill-tag tag-green">GEO / AEO</span>
+          <span class="skill-tag tag-green">Content Strategy</span>
+          <span class="skill-tag tag-green">Analytics & Reporting</span>
+          <span class="skill-tag tag-orange">Demand Generation</span>
+          <span class="skill-tag tag-orange">CRO</span>
+          <span class="skill-tag tag-orange">GTM Strategy</span>
+          <span class="skill-tag tag-orange">Product Marketing</span>
+          <span class="skill-tag tag-orange">E-commerce</span>
+          <span class="skill-tag tag-purple">Paid Social</span>
+          <span class="skill-tag tag-purple">SMM</span>
+          <span class="skill-tag tag-blue">ABM</span>
+          <span class="skill-tag tag-blue">Email & Automation</span>
+          <span class="skill-tag tag-blue">Outbound Marketing</span>
+          <span class="skill-tag tag-blue">Website Management</span>
+        </div>
+
+        <div class="skill-col-title">Languages</div>
+        <div class="tag-cloud">
+          <span class="skill-tag tag-gray">English (Advanced)</span>
+          <span class="skill-tag tag-gray">Russian (Native)</span>
+          <span class="skill-tag tag-gray">Finnish (Basic)</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Tools -->
+      <div class="reveal reveal-delay-2">
+        <div class="skill-col-title">Tools</div>
+        <div class="tag-cloud">
+          <span class="skill-tag tag-blue">ChatGPT</span>
+          <span class="skill-tag tag-blue">Claude</span>
+          <span class="skill-tag tag-blue">Gemini</span>
+          <span class="skill-tag tag-blue">Cursor</span>
+          <span class="skill-tag tag-teal">HubSpot</span>
+          <span class="skill-tag tag-teal">Salesforce</span>
+          <span class="skill-tag tag-teal">Apollo</span>
+          <span class="skill-tag tag-teal">Cognism</span>
+          <span class="skill-tag tag-green">GA4</span>
+          <span class="skill-tag tag-green">Google Search Console</span>
+          <span class="skill-tag tag-green">Microsoft Clarity</span>
+          <span class="skill-tag tag-green">Hotjar</span>
+          <span class="skill-tag tag-purple">LinkedIn</span>
+          <span class="skill-tag tag-purple">LinkedIn Campaign Manager</span>
+          <span class="skill-tag tag-purple">Instagram</span>
+          <span class="skill-tag tag-orange">Webflow</span>
+          <span class="skill-tag tag-orange">Shopify</span>
+          <span class="skill-tag tag-orange">Canva</span>
+          <span class="skill-tag tag-gray">Trello</span>
+          <span class="skill-tag tag-gray">Slack</span>
+          <span class="skill-tag tag-gray">Confluence</span>
+          <span class="skill-tag tag-gray">Jira</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section id="marquee">
+  <div class="marquee-track">
+    <span class="marquee-text">Full-funnel · <span class="mo">B2B</span> · B2C · <span class="mp">D2C</span> · SaaS · <span class="mo">E-commerce</span> · Finland-based · <span class="mp">Open to work</span> · 6 years of experience · Full-stack marketer · <span class="mo">Remote-friendly</span> · AI-powered · <span class="mp">Content</span> · SEO · <span class="mo">Growth</span> ·&nbsp;</span>
+    <span class="marquee-text">Full-funnel · <span class="mo">B2B</span> · B2C · <span class="mp">D2C</span> · SaaS · <span class="mo">E-commerce</span> · Finland-based · <span class="mp">Open to work</span> · 6 years of experience · Full-stack marketer · <span class="mo">Remote-friendly</span> · AI-powered · <span class="mp">Content</span> · SEO · <span class="mo">Growth</span> ·&nbsp;</span>
+  </div>
+</section>
+
+<!-- PROMPT SECTION -->
+<section id="prompt-section">
+  <div class="prompt-inner">
+    <div class="prompt-wrap">
+    <h2 class="prompt-heading reveal">How can <span class="rainbow-text">Evgeniia</span> help your company?</h2>
+    <div class="prompt-card reveal reveal-delay-1">
+      <div class="prompt-line">
+        <span class="prompt-static">Evgeniia can&nbsp;</span>
+        <span class="prompt-text"><span id="rotating-text"></span><span class="prompt-cursor"></span></span>
+      </div>
+      <div class="prompt-footer">
+        <a href="#contact" class="prompt-send" aria-label="Let's talk">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 14V4M4 9l5-5 5 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-left reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's work together</h2>
+      <p>I'm open to digital marketing, content, growth and product marketing roles. Hybrid in Finland or remote EMEA. Contact me via email or LinkedIn.</p>
+      <div class="contact-btns">
+        <a href="mailto:kapshtyk.design@gmail.com" class="contact-icon-link" aria-label="Send an email">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="12" fill="var(--text)"/>
+            <path d="M10 14h24v16H10V14zm0 0l12 10 12-10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/evgeniia-kapshtyk/" target="_blank" rel="noopener noreferrer" class="contact-icon-link" aria-label="LinkedIn profile">
+          <img src="linkedin-logo.png" alt="LinkedIn" width="44" height="44" style="display:block;border-radius:10px;">
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-card reveal reveal-delay-1">
+      <div class="contact-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Available now</span>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Location</span>
+        <span class="contact-detail-value">Helsinki, Finland</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Open to</span>
+        <span class="contact-detail-value">Hybrid Finland · Remote EMEA</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Timezone</span>
+        <span class="contact-detail-value">EET / UTC+2–3</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Response time</span>
+        <span class="contact-detail-value">Within 24 hours</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Notice period</span>
+        <span class="contact-detail-value">ASAP</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-identity">
+        <img src="profile.png" alt="Evgeniia" class="footer-avatar"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="footer-avatar-fb">EK</div>
+        <span class="footer-name">Evgeniia Kapshtyk</span>
+      </div>
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#testimonials">Recommendations</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Evgeniia Kapshtyk · Helsinki, Finland</span>
+      <span class="footer-vibe">I vibe-coded this website in Claude 🙂</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Typing animation
+  const phrases = [
+    "turn your traffic into qualified leads.",
+    "build outbound sequences that turn cold contacts into warm leads.",
+    "get your content found on Google.",
+    "get you found in AI search, not just Google.",
+    "run paid ads that bring revenue, not just clicks.",
+    "create content that moves buyers through the funnel.",
+    "set up email sequences that work while you sleep.",
+    "grow your organic traffic without paying for every click.",
+    "make your website work harder for you.",
+    "launch a full marketing engine from scratch."
+  ];
+  let phraseIndex = 0, charIndex = 0, isDeleting = false;
+  const typingEl = document.getElementById('rotating-text');
+  function type() {
+    const current = phrases[phraseIndex];
+    if (isDeleting) {
+      typingEl.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingEl.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+    }
+    if (!isDeleting && charIndex === current.length) {
+      setTimeout(() => { isDeleting = true; type(); }, 2200);
+      return;
+    }
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+    setTimeout(type, isDeleting ? 35 : 52);
+  }
+  setTimeout(type, 600);
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
