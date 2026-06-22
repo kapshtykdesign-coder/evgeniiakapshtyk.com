@@ -42,7 +42,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" /></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -640,7 +641,7 @@
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#" class="nav-identity">
-      <img src="profile.png" alt="Evgeniia" class="nav-avatar"
+      <img src="profile.webp" alt="Evgeniia" class="nav-avatar"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="nav-avatar-fb">EK</div>
       <span class="nav-name">Evgeniia Kapshtyk</span>
@@ -694,7 +695,10 @@
         <p>Outside work: forests, the seaside, design and architecture, travel and World of Warcraft.</p>
       </div>
       <div class="about-photo reveal reveal-delay-2">
-        <img src="profile.png" alt="Evgeniia Kapshtyk" onerror="this.parentElement.style.display='none'">
+        <picture>
+          <source srcset="profile.webp" type="image/webp">
+          <img src="profile.png" alt="Evgeniia Kapshtyk" onerror="this.parentElement.style.display='none'">
+        </picture>
       </div>
     </div>
   </div>
@@ -1091,7 +1095,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-identity">
-        <img src="profile.png" alt="Evgeniia" class="footer-avatar"
+        <img src="profile.webp" alt="Evgeniia" class="footer-avatar"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="footer-avatar-fb">EK</div>
         <span class="footer-name">Evgeniia Kapshtyk</span>
