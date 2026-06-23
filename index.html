@@ -40,11 +40,19 @@
     "knowsLanguage": ["English", "Russian", "Finnish"]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" /></noscript>
+  <!-- Preload critical font weights to eliminate Google Fonts CSS round-trip -->
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYAZ9hiA.woff2" crossorigin />
   <style>
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 300; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfAZ9hiA.woff2) format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fAZ9hiA.woff2) format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYAZ9hiA.woff2) format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 700; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiA.woff2) format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYAZ9hiA.woff2) format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 900; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYAZ9hiA.woff2) format('woff2'); }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -287,11 +295,11 @@
       min-height: 196px; display: flex; flex-direction: column;
       justify-content: flex-end; text-align: center;
     }
-    .stat-card-1 { background: radial-gradient(circle at 60% 0%, #A78BFA 0%, #7C3AED 40%, #191828 100%); }
-    .stat-card-2 { background: radial-gradient(circle at 50% 0%, #F9A8D4 0%, #EC4899 40%, #191828 100%); }
-    .stat-card-3 { background: radial-gradient(circle at 40% 0%, #93C5FD 0%, #3B82F6 40%, #191828 100%); }
-    .stat-card-4 { background: radial-gradient(circle at 50% 0%, #6EE7B7 0%, #10B981 40%, #191828 100%); }
-    .stat-card-5 { background: radial-gradient(circle at 50% 0%, #FCD34D 0%, #F59E0B 40%, #191828 100%); }
+    .stat-card-1 { background: radial-gradient(circle at 60% 0%, #A78BFA 0%, #7C3AED 45%, #3B1A7A 100%); }
+    .stat-card-2 { background: radial-gradient(circle at 50% 0%, #F9A8D4 0%, #EC4899 45%, #8B1A50 100%); }
+    .stat-card-3 { background: radial-gradient(circle at 40% 0%, #93C5FD 0%, #3B82F6 45%, #1A2D8B 100%); }
+    .stat-card-4 { background: radial-gradient(circle at 50% 0%, #6EE7B7 0%, #10B981 45%, #0A5C38 100%); }
+    .stat-card-5 { background: radial-gradient(circle at 50% 0%, #FCD34D 0%, #F59E0B 45%, #8B5A0A 100%); }
     .stat-card::before {
       content: ''; position: absolute; inset: 0;
       background: radial-gradient(circle at 60% 20%, rgba(255,255,255,0.12) 0%, transparent 60%);
@@ -419,16 +427,16 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius); padding: 28px 24px;
-      display: flex; flex-direction: column; gap: 20px;
+      display: grid; grid-template-rows: 1fr auto; gap: 20px;
       transition: background 0.2s, transform 0.2s;
     }
     .tcard:hover { background: var(--bg-alt); transform: translateY(-3px); }
-    .tquote { font-size: 14px; line-height: 1.75; color: var(--text-muted); flex: 1; }
+    .tquote { font-size: 14px; line-height: 1.75; color: var(--text-muted); }
     .tquote::before {
       content: '\201C'; font-size: 36px; color: var(--purple);
       opacity: 0.8; line-height: 0; vertical-align: -12px; margin-right: 3px;
     }
-    .tauthor { border-top: 1px solid var(--border); padding-top: 16px; }
+    .tauthor { padding-top: 4px; }
     .tauthor-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .tauthor-title { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
@@ -649,8 +657,8 @@
     </a>
     <ul>
       <li><a href="#about" class="nl">About</a></li>
-      <li><a href="#experience" class="nl">Experience</a></li>
       <li><a href="#testimonials" class="nl">Recommendations</a></li>
+      <li><a href="#experience" class="nl">Experience</a></li>
       <li><a href="#contact" class="nl">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" id="hamburger">
@@ -660,8 +668,8 @@
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="#about" class="mobile-link">About</a>
-  <a href="#experience" class="mobile-link">Experience</a>
   <a href="#testimonials" class="mobile-link">Recommendations</a>
+  <a href="#experience" class="mobile-link">Experience</a>
   <a href="#contact" class="mobile-link">Contact</a>
 </div>
 
@@ -1103,8 +1111,8 @@
       </div>
       <div class="footer-nav">
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
         <a href="#testimonials">Recommendations</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
