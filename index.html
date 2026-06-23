@@ -285,10 +285,12 @@
     .stats-track {
       display: flex; gap: 16px;
       width: max-content;
-      animation: statsScroll 30s linear infinite;
+      animation: statsScroll 18s linear infinite;
       padding: 4px 0 8px;
+      will-change: transform;
     }
     .stats-track:hover { animation-play-state: paused; }
+    .stats-track.paused { animation-play-state: paused; }
     @keyframes statsScroll {
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -623,8 +625,9 @@
       /* Stats */
       .stats-top { padding: 48px 20px 24px; }
       .stats-headline { font-size: clamp(30px, 8vw, 44px); letter-spacing: -1.5px; }
-      .stat-card { width: 200px; min-height: 160px; padding: 24px 16px; }
-      .stat-num { font-size: clamp(28px, 7vw, 40px); }
+      .stats-scroll-outer { -webkit-mask-image: none; mask-image: none; }
+      .stat-card { width: 220px; min-height: 175px; padding: 28px 18px; }
+      .stat-num { font-size: clamp(32px, 8vw, 44px); }
       /* Gradient from center on mobile so card edges aren't dark */
       .stat-card-1 { background: radial-gradient(circle at 50% 40%, #C4B5FD 0%, #8B5CF6 55%, #5B21B6 100%); }
       .stat-card-2 { background: radial-gradient(circle at 50% 40%, #F9A8D4 0%, #EC4899 55%, #9D174D 100%); }
@@ -1200,6 +1203,17 @@
       hamburger.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Pause stats animation when section is off-screen (saves CPU/battery on mobile)
+  const statsTrack = document.querySelector('.stats-track');
+  if (statsTrack) {
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        statsTrack.classList.toggle('paused', !e.isIntersecting);
+      });
+    }, { threshold: 0 });
+    statsObserver.observe(document.getElementById('stats'));
+  }
 </script>
 
 </body>
