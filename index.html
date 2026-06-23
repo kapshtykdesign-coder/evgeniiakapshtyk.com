@@ -46,11 +46,9 @@
   }
   </script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Preload critical font weights to eliminate Google Fonts CSS round-trip -->
   <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYAZ9hiA.woff2" crossorigin />
   <style>
-    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 300; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfAZ9hiA.woff2) format('woff2'); }
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2'); }
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fAZ9hiA.woff2) format('woff2'); }
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYAZ9hiA.woff2) format('woff2'); }
@@ -135,7 +133,6 @@
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
 
     /* ── HERO ─────────────────────────────── */
     #hero {
@@ -262,8 +259,11 @@
     .prompt-send:hover { background: #2e2d42; transform: scale(1.08); }
 
     /* ── STATS ────────────────────────────── */
-    #stats { background: var(--bg-dark); padding: 80px 40px; }
-    .stats-top { max-width: var(--max); margin: 0 auto 48px; }
+    #stats { background: var(--bg-dark); padding: 80px 0; }
+    .stats-top { max-width: var(--max); margin: 0 auto 48px; padding: 0 40px; }
+    .stats-dots { display: none; justify-content: center; gap: 6px; margin-top: 14px; padding: 0 20px; }
+    .stats-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.25); transition: background 0.25s, width 0.25s; flex-shrink: 0; }
+    .stats-dot.active { background: #fff; width: 18px; border-radius: 3px; }
     .stats-eyebrow {
       font-size: 11px; font-weight: 600; text-transform: uppercase;
       letter-spacing: 0.14em; color: rgba(255,255,255,0.3); margin-bottom: 12px;
@@ -386,13 +386,9 @@
       background: var(--bg); color: var(--text-muted);
       font-size: 12px; padding: 4px 12px; border-radius: 100px; border: 1px solid var(--border);
     }
-    a.chip-t {
-      text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
-      transition: border-color 0.15s, color 0.15s;
-    }
-    a.chip-t:hover { border-color: var(--text-ghost); color: var(--text); }
 
     /* ── SKILLS ───────────────────────────── */
+    #skills { background: var(--white); padding: 100px 40px; }
     .skills-inner { max-width: var(--max); margin: 0 auto; }
     .skills-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
     .skill-col-title {
@@ -401,8 +397,6 @@
     }
     .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
     .tag-cloud:last-child { margin-bottom: 0; }
-    /* ── SKILLS ───────────────────────────── */
-    #skills { background: var(--white); padding: 100px 40px; }
     .skill-tag {
       display: inline-block;
       font-size: 13px; padding: 6px 14px; border-radius: 100px;
@@ -546,7 +540,6 @@
       transition: all 0.18s;
     }
     .footer-nav a:hover { color: var(--text); background: var(--bg-alt); }
-    .footer-divider { display: none; }
     .footer-bottom {
       display: flex; justify-content: space-between; align-items: center;
       flex-wrap: wrap; gap: 8px;
@@ -599,7 +592,7 @@
 
       /* Global padding */
       #hero, #about, #experience, #skills, #testimonials, #contact,
-      #prompt-section, .stats-top { padding-left: 20px; padding-right: 20px; }
+      #prompt-section { padding-left: 20px; padding-right: 20px; }
       footer { padding-left: 20px; padding-right: 20px; }
 
       /* Section vertical padding — reduce from 100px to 60px */
@@ -622,12 +615,15 @@
       }
       .about-photo img { width: 180px; height: 180px; }
 
-      /* Stats */
+      /* Stats — snap carousel on mobile */
       .stats-top { padding: 48px 20px 24px; }
       .stats-headline { font-size: clamp(30px, 8vw, 44px); letter-spacing: -1.5px; }
-      .stats-scroll-outer { -webkit-mask-image: none; mask-image: none; }
-      .stat-card { width: 220px; min-height: 175px; padding: 28px 18px; }
+      .stats-scroll-outer { -webkit-mask-image: none; mask-image: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 20px; }
+      .stats-track { animation: none; padding: 4px 20px 8px; will-change: auto; }
+      .stat-card { width: 220px; min-height: 175px; padding: 28px 18px; scroll-snap-align: start; }
+      .stat-card[aria-hidden="true"] { display: none; }
       .stat-num { font-size: clamp(32px, 8vw, 44px); }
+      .stats-dots { display: flex; }
       /* Gradient from center on mobile so card edges aren't dark */
       .stat-card-1 { background: radial-gradient(circle at 50% 40%, #C4B5FD 0%, #8B5CF6 55%, #5B21B6 100%); }
       .stat-card-2 { background: radial-gradient(circle at 50% 40%, #F9A8D4 0%, #EC4899 55%, #9D174D 100%); }
@@ -736,7 +732,7 @@
     <div class="stats-eyebrow">Results I've delivered</div>
     <div class="stats-headline">Numbers that <span class="grad">actually matter</span></div>
   </div>
-  <div class="stats-scroll-outer">
+  <div class="stats-scroll-outer" id="statsOuter">
     <div class="stats-track">
       <div class="stat-card stat-card-1">
         <div class="stat-num">+1750%</div>
@@ -763,7 +759,6 @@
         <div class="stat-label">happy customers</div>
         <div class="stat-note">at Scandy Shop</div>
       </div>
-      <!-- duplicate for seamless loop -->
       <div class="stat-card stat-card-1" aria-hidden="true">
         <div class="stat-num">+1750%</div>
         <div class="stat-label">demo requests</div>
@@ -790,6 +785,13 @@
         <div class="stat-note">at Scandy Shop</div>
       </div>
     </div>
+  </div>
+  <div class="stats-dots" id="statsDots">
+    <div class="stats-dot active"></div>
+    <div class="stats-dot"></div>
+    <div class="stats-dot"></div>
+    <div class="stats-dot"></div>
+    <div class="stats-dot"></div>
   </div>
 </section>
 
@@ -854,7 +856,7 @@
 
       <div class="exp-item reveal">
         <div>
-          <div class="exp-co">One Click LCA</div>
+          <div class="exp-co"><a href="https://www.linkedin.com/company/one-click-lca/" target="_blank" rel="noopener noreferrer">One Click LCA <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></a></div>
           <div class="exp-desc">B2B SaaS · Sustainability</div>
           <div class="exp-period">Mar – Jun 2026</div>
         </div>
@@ -1133,7 +1135,6 @@
         <a href="#contact">Contact</a>
       </div>
     </div>
-    <div class="footer-divider"></div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Evgeniia Kapshtyk · Helsinki, Finland</span>
       <span class="footer-vibe">I vibe-coded this website in Claude 🙂</span>
@@ -1213,6 +1214,18 @@
       });
     }, { threshold: 0 });
     statsObserver.observe(document.getElementById('stats'));
+  }
+
+  // Snap carousel dots (mobile only)
+  const statsOuter = document.getElementById('statsOuter');
+  const statsDots = document.querySelectorAll('.stats-dot');
+  if (statsOuter && statsDots.length) {
+    statsOuter.addEventListener('scroll', () => {
+      const cards = statsOuter.querySelectorAll('.stat-card:not([aria-hidden])');
+      const cardW = cards[0] ? cards[0].offsetWidth + 12 : 1;
+      const idx = Math.min(Math.round(statsOuter.scrollLeft / cardW), statsDots.length - 1);
+      statsDots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }, { passive: true });
   }
 </script>
 
