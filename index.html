@@ -163,12 +163,25 @@
     }
 
     h1 {
-      font-size: clamp(48px, 8vw, 78px);
-      font-weight: 900; line-height: 1.02; letter-spacing: -3px;
-      margin-bottom: 52px;
+      font-size: clamp(44px, 6.4vw, 68px);
+      font-weight: 900; line-height: 1.04; letter-spacing: -2.5px;
+      text-wrap: balance;
+      margin-bottom: 28px;
       animation: heroIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.1s both;
     }
     h1 .hl { color: var(--orange); }
+    h1 .hello {
+      display: block;
+      font-size: 0.5em; font-weight: 700; letter-spacing: -0.5px;
+      line-height: 1.2; color: var(--text); opacity: 0.55;
+      margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: clamp(18px, 2.2vw, 22px); line-height: 1.5;
+      color: var(--muted, #6b6a80); max-width: 640px;
+      margin: 0 0 12px;
+      animation: heroIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.18s both;
+    }
 
     @keyframes heroIn {
       from { opacity:0; transform: translateY(32px); }
@@ -603,8 +616,9 @@
 
       /* Hero */
       #hero { min-height: calc(100svh - 68px); padding: 0 20px; }
-      h1 { font-size: clamp(36px, 10.5vw, 52px); letter-spacing: -2px; margin-bottom: 36px; }
+      h1 { font-size: clamp(34px, 9.5vw, 48px); letter-spacing: -1.5px; margin-bottom: 20px; }
       .d-br { display: none; }
+      .hero-sub { font-size: 17px; }
       .hero-foot { padding-top: 20px; }
       .hero-actions { flex-wrap: wrap; }
 
@@ -692,10 +706,10 @@
   <div class="hero-inner">
     <div class="hero-badge">Open to new roles</div>
     <h1>
-      Hello, I'm Evgeniia.<br/>
-      I help B2B startups and<br class="d-br"/>
-      small companies <span class="hl">grow <br class="d-br"/>through marketing</span>
+      <span class="hello">Hello, I'm Evgeniia.</span>
+      I help tech companies <span class="hl">explain complex products</span> to global buyers.
     </h1>
+    <p class="hero-sub">Through SEO, AI search, content and websites that convert.</p>
     <div class="hero-foot">
       <div class="hero-actions">
         <a href="#contact" class="btn btn-dark">Let's talk</a>
